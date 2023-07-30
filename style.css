@@ -1,0 +1,133 @@
+* {
+  font-family: Muli,"Helvetica Light", Arial, sans-serif;
+  font-weight: lighter;
+  margin: 0%;
+  padding: 0%;
+}
+
+@font-face {
+  font-family: Muli;
+  src: url(public/fonts/muli/Muli-Light.ttf);
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+  fill: "#393939";
+}
+.f-r {
+  display: flex;
+  flex-direction: row;
+}
+.hover-red:hover {
+  fill: red;
+  color: red;
+}
+.container {
+  width: 91vw;
+  margin: auto;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: smaller;
+}
+.m-h-15 {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.m-v-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.m-h-5 {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.m-v-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.p-b-5 {
+  padding-bottom: 5px;
+}
+.p-t-5 {
+  padding-top: 5px;
+}
+
+.p-v-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.p-h-5 {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+#Tashkent {
+  margin-right: 30px;
+}
+
+.hover-registriation:hover {
+  fill: #f83838;
+}
+
+#languageDropdownMenu {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  font-size: 16px;
+  cursor: default;
+  width: 80px;
+  /* position: absolute; */
+}
+#languageActiveButton {
+  border-radius: 5px;
+  border: 1px solid #f83838;
+  color: #f83838;
+  fill: #f83838;
+}
+
+#languageActiveButton:hover {
+  background-color: #f83838;
+  color: white;
+  fill: white;
+}
+
+.languageButton {
+    color: #f83838;
+  text-align: center;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  height: 30px;
+  width: 80px;
+}
+
+.languageButton:hover {
+  background-color: #f83838;
+  color: #fff;
+  fill: #fff;
+}
+
+#languageInactiveButtons {
+  position: absolute;
+  margin-top: 35px;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
