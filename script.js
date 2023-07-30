@@ -1,29 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const logInButton = document.getElementById('login');
-    const signUpButton = document.getElementById('signup');
+
     const profileSvg = document.getElementById('profileSvg');
     const languageActiveButton = document.getElementById('languageActiveButton');
     const languageInActiveButtons = document.getElementById("languageInactiveButtons");
     const languageDropdownMenu = document.getElementById('languageDropdownMenu');
-    const languageButtons = document.getElementsByClassName('languageButton');
+    const languageButtons = document.getElementsByClassName('inActiveLanguageButton');
     const hoverColor = "#f83838";
     let activeLanguage = languageButtons[0].getElementsByTagName('span')[0].innerText;
-    let languages = {
-        'english': 'English',
-        'russian': 'Русский',
-        'uzbek': "O'zbek",
+
+    let languages = ["English", "Русский", "O'zbek"];
+
+
+    for (let index = 0; index < languageButtons.length; index++) {
+        const button = languageButtons[index];
+        const activeLanguage = languages[0]
+        const clickedLanguage = button.innerText;
+        console.log(button.innerText);
+        button.addEventListener('click', function () {
+            const lang = languages.indexOf(clickedLanguage);
+            languages[0] = clickedLanguage;
+            languages[lang] = activeLanguage;
+            languageActiveButton.getElementsByTagName('span')[0].innerHTML = clickedLanguage;
+            console.log(languages[0]);
+        });
+
     }
 
-
-    languageInActiveButtons.children.forEach(button => {
-        button.addEventListener('click', () => {
-                    language = button.getElementsByTagName('span')[0].innerText;
-                    return language
-                });
-    });
- 
-
-    // });
     console.log(languageInActiveButtons.children);
     languageActiveButton.innerHTML = `<span style="margin-right: 5px">${languages[0]}</span>
               <svg
@@ -56,24 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-    const Hover = (target, color) => {
-        target.style.fill = color;
-    }
-    logInButton.addEventListener('mouseover', function (event) {
-        Hover(profileSvg, hoverColor)
-    });
-    logInButton.addEventListener('mouseout', function (event) {
-        Hover(profileSvg, "")
-    })
-    signUpButton.addEventListener('mouseover', function (event) {
-        Hover(profileSvg, hoverColor)
-    });
-
-    signUpButton.addEventListener('mouseout', function (event) {
-        Hover(profileSvg, "")
-    });
 
 
 })
