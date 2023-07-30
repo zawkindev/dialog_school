@@ -121,8 +121,10 @@ header {
 }
 
 #languageInactiveButtons {
+  display: none;
   position: absolute;
   margin-top: 35px;
+  flex-direction: column;
 }
 
 .prevent-select {
