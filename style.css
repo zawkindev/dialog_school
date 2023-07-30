@@ -1,6 +1,5 @@
 * {
   font-family: Muli,"Helvetica Light", Arial, sans-serif;
-  /* font-weight: lighter; */
   margin: 0%;
   padding: 0%;
 }
@@ -76,7 +75,7 @@ header {
 }
 
 #Tashkent {
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 
 .hover-registriation:hover {
