@@ -1,2 +1,2 @@
-![alt text](./screenshot.png?raw=true)
-![alt text](./screen.png?raw=true)
+!(./screenshot.png?raw=true)
+!(./screen.png?raw=true)
