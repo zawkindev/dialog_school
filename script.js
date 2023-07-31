@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const languageActiveButton = document.getElementById('languageActiveButton');
     const languageInActiveButtons = document.getElementById('languageInactiveButtons');
     const languageButtons = document.getElementsByClassName('inActiveLanguageButton');
+    const moreDropdownMenuOptions = document.getElementsByClassName('moreMenuOptions')[0];
+    const more = document.getElementById('more');
     let languages = ["English", "Русский", "O'zbek"];
     let languageDropdown = false
     for (let index = 0; index < languageButtons.length; index++) {
@@ -20,6 +22,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     languageActiveButton.addEventListener('click', function () {
         languageDropdown = !languageDropdown;
-        languageInActiveButtons.style.display = (languageDropdown? 'flex' : 'none');
+        languageInActiveButtons.style.display = (languageDropdown ? 'flex' : 'none');
     });
+
+
+
+    more.addEventListener('mouseover', function () {
+        moreDropdownMenu.style.display = 'flex';
+    });
+    moreDropdownMenuOptions.addEventListener('mouseout', function () {
+        moreDropdownMenu.style.display = 'none';
+    });
+    moreDropdownMenuOptions.addEventListener('mouseover', function () {
+        moreDropdownMenu.style.display = 'flex';
+    })
+
+
+
 })
+

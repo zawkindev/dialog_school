@@ -6,28 +6,109 @@
     <title>Dialog School</title>
   </head>
   <body>
-    <header class="f-r container">
-      <div id="header-left" class="f-r center hover-red">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          class="icon"
-        >
-          <path
-            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-          />
-        </svg>
-        <a>noreply@gmail.com</a>
-      </div>
-      <div id="header-right" class="f-r">
-        <div class="f-r center">
-          <div id="languageDropdownMenu" class="prevent-select">
-            <div id="languageActiveButton" class="f-r languageButton">
-              <span style="margin-right: 5px">English</span>
+    <div id="home" class="prevent-select">
+      <header class="f-r container">
+        <div id="header-left" class="f-r center hover-cyan">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="icon"
+          >
+            <path
+              d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+            />
+          </svg>
+          <a>noreply@gmail.com</a>
+        </div>
+        <div id="header-right" class="f-r">
+          <div class="f-r center">
+            <div id="languageDropdownMenu" class="prevent-select">
+              <div id="languageActiveButton" class="f-r languageButton">
+                <span style="margin-right: 5px">English</span>
+                <svg
+                  style="margin-top: 5px"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                  />
+                </svg>
+              </div>
+              <div id="languageInactiveButtons">
+                <div
+                  class="languageButton inActiveLanguageButton f-r center p-b-5"
+                >
+                  <span>English</span>
+                </div>
+                <div
+                  class="languageButton inActiveLanguageButton f-r center p-b-5"
+                >
+                  <span>Русский</span>
+                </div>
+                <div
+                  class="languageButton inActiveLanguageButton f-r center p-b-5"
+                >
+                  <span>O'zbek</span>
+                </div>
+              </div>
+            </div>
+            <div id="Tashkent" class="hover-cyan">
+              <div>
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-map-pin"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle></svg
+                ><span>Tashkent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="navbar" class="container f-r jc-sb p-b-5">
+        <div class="upperCase m-h-15">
+          <a class="m-h-5 hover-cyan" href="#home"
+            ><span class="hover-cyan">home </span></a
+          >
+          <a class="m-h-5 hover-cyan" href="#services"
+            ><span class="hover-cyan">services</span></a
+          >
+          <a class="m-h-5 hover-cyan" href="#about"
+            ><span class="hover-cyan">about us</span></a
+          >
+        </div>
+        <h1 class="main-color">Dialog School</h1>
+        <div class="upperCase f-r m-h-15">
+          <a href="#gallery" class="m-h-5 hover-cyan"
+            ><span class="hover-cyan">gallery</span></a
+          >
+          <a href="#videos" class="m-h-5 hover-cyan"
+            ><span class="hover-cyan">videos</span></a
+          >
+          <div id="dropdownFix"></div>
+          <div class="hover-cyan" id="more">
+            <div class="f-r">
+              <span style="margin-right: 0">more</span>
               <svg
-                style="margin-top: 5px"
-                width="20px"
-                height="20px"
+                style="padding-right: 5px; padding-top: 3px"
+                width="22px"1
+                height="22px"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -38,42 +119,17 @@
                 />
               </svg>
             </div>
-            <div id="languageInactiveButtons">
-              
-              <div class="languageButton inActiveLanguageButton f-r center p-b-5">
-                <span>English</span>
-              </div>
-              <div class="languageButton inActiveLanguageButton f-r center p-b-5">
-                <span>Русский</span>
-              </div>
-              <div class="languageButton inActiveLanguageButton f-r center p-b-5">
-                <span>O'zbek</span>
-              </div>
-            </div>
           </div>
-          <div id="Tashkent" class="hover-red">
-            <div>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-map-pin"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle></svg
-              ><span>Tashkent</span>
+          <div id="moreDropdownMenu" class="t-t-none p-absolute" >
+            <div class="arrow-top"></div>
+            <div class="p-absolute moreMenuOptions" >
+              <span onclick="window.location.href='#testimonals'" class="prevent-select moreMenuOption"  style="border-top-left-radius: 5px; border-top-right-radius: 5px;">Testimonals</span>
+              <span onclick="window.location.href='#contact_us'" class="prevent-select moreMenuOption" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" >Contact Us</span>
             </div>
           </div>
         </div>
       </div>
-    </header>
-
-    <div id="navbar" class="container"></div>
+    </div>
 
     <script src="./script.js"></script>
   </body>
