@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   more.addEventListener("mouseover", function () {
+    moreMenuLoggic = true
     moreDropdownMenu.style.display = "flex";
   });
   more.addEventListener("click", function () {
@@ -40,9 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     moreDropdownMenu.style.display = moreMenuLoggic ? "flex" : "none";
   });
   moreDropdownMenuOptions.addEventListener("mouseout", function () {
+    moreMenuLoggic = false
     moreDropdownMenu.style.display = "none";
   });
   moreDropdownMenuOptions.addEventListener("mouseover", function () {
+    moreMenuLoggic = true
     moreDropdownMenu.style.display = "flex";
   });
 
