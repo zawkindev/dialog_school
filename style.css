@@ -153,6 +153,10 @@ header {
   justify-content: space-between;
 }
 
+.jc-se{
+  justify-content:space-evenly;
+}
+
 .jc-sa {
   justify-content: space-around;
 }
@@ -297,8 +301,22 @@ w-100 {
   margin-bottom:60px;
   margin-top:60px;
 }
+.m-b-30{
+  margin-bottom:30px;
+}
 #audioligy{
   background-image: url(public/images/audioligy.jpeg);
   background-position:cover;
   background-repeat: no-repeat;
+}
+
+.gallery_photo{
+  width:415px;
+  height:225px;
+  margin-top:15px;
+  border-radius:15px;
+  background-color:#6000ff;
+}
+.f-w{
+  flex-wrap: wrap;
 }
