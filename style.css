@@ -287,6 +287,16 @@ w-100 {
   margin-top:30px;
 }
 
+.m-t-60{
+  margin-top:60px;
+}
+.m-b-60{
+  margin-bottom:60px;
+}
+.m-v-60{
+  margin-bottom:60px;
+  margin-top:60px;
+}
 #audioligy{
   background-image: url(public/images/audioligy.jpeg);
   background-position:cover;
