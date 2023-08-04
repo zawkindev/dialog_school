@@ -304,6 +304,9 @@ w-100 {
 .m-b-30{
   margin-bottom:30px;
 }
+.m-t-150{
+  margin-top:150px;
+}
 #audioligy{
   background-image: url(public/images/audioligy.jpeg);
   background-position:cover;
@@ -317,6 +320,15 @@ w-100 {
   border-radius:15px;
   background-color:#6000ff;
 }
+
+.video{
+  width:640px;
+  height:300px;
+  margin-top:15px;
+  border-radius:15px;
+  background-color:#000000;
+}
+
 .f-w{
   flex-wrap: wrap;
 }
