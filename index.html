@@ -6,7 +6,7 @@
     <title>Dialog School</title>
   </head>
   <body>
-    <div id="home" class="prevent-select">
+    <div id="home" class="prevent-select hidden">
       <header class="f-r container">
         <div id="header-left" class="f-r center hover-cyan">
           <svg
@@ -81,24 +81,28 @@
         </div>
       </header>
 
-      <div id="navbar" class="container f-r jc-sb p-b-5">
-        <div class="upperCase">
-          <a class="m-h-5 hover-cyan" href="#home"
-            ><span class="hover-cyan">home </span></a
+      <div id="navbar" class="container f-r jc-sb p-b-5 upperCase">
+        <div class="upperCase" id="navbar-right">
+          <a class="m-h-5 hover-cyan"  onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+           ><span class="hover-cyan">home </span></a
           >
-          <a class="m-h-5 hover-cyan" href="#services"
+          <a class="m-h-5 hover-cyan" onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+ 
             ><span class="hover-cyan">services</span></a
           >
-          <a class="m-h-5 hover-cyan" href="#about"
+          <a class="m-h-5 hover-cyan" onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+
             ><span class="hover-cyan">about us</span></a
           >
         </div>
         <h1 class="main-color">Dialog School</h1>
         <div class="upperCase f-r m-h-15">
-          <a href="#gallery" class="m-h-5 hover-cyan"
+          <a onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+ class="m-h-5 hover-cyan"
             ><span class="hover-cyan">gallery</span></a
           >
-          <a href="#videos" class="m-h-5 hover-cyan"
+          <a onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+ class="m-h-5 hover-cyan"
             ><span class="hover-cyan">videos</span></a
           >
           <div id="dropdownFix"></div>
@@ -125,7 +129,7 @@
             <div class="arrow-top"></div>
             <div class="p-absolute moreMenuOptions">
               <span
-                onclick="window.location.href='#testimonals'"
+                onclick='document.getElementById("testimonals").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
                 class="prevent-select moreMenuOption"
                 style="
                   border-top-left-radius: 5px;
@@ -134,7 +138,8 @@
                 >Testimonals</span
               >
               <span
-                onclick="window.location.href='#contact_us'"
+               
+                onclick='document.getElementById("contact_us").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
                 class="prevent-select moreMenuOption"
                 style="
                   border-bottom-left-radius: 5px;
@@ -148,7 +153,7 @@
       </div>
     </div>
 
-    <div id="services" class="container center m-t-150">
+    <div id="services" class="container center m-t-150 hidden">
       <span class="main-color" style="font-size: 30px; font-weight: 900"
         >Services</span
       >
@@ -231,7 +236,7 @@
         </div>
       </div>
     </div>
-    <div id="about" class="container center m-t-60 m-b-30">
+    <div id="about" class="container center m-t-60 m-b-30 hidden">
       <span class="main-color" style="font-size: 30px; font-weight: 900"
         >About Us</span
       >
@@ -251,7 +256,7 @@
         loved ones.
       </p>
     </div>
-    <div id="gallery" class="container center m-t-150 m-b-60">
+    <div id="gallery" class="container center m-t-150 m-b-60 hidden">
       <span
         class="main-color m-b-30"
         style="
@@ -270,7 +275,7 @@
         <div class="gallery_photo"></div>
       </div>
     </div>
-    <div id="videos" class="container center m-t-150 m-b-60">
+    <div id="videos" class="container center m-t-150 m-b-60 hidden">
       <span
         class="main-color m-b-30"
         style="
@@ -297,6 +302,6 @@
       </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
   </body>
 </html>

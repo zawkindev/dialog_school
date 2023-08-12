@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const languageActiveButton = document.getElementById("languageActiveButton");
+  const allDivs = document.querySelectorAll("div");
   const languageInActiveButtons = document.getElementById(
     "languageInactiveButtons",
   );
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   more.addEventListener("mouseover", function () {
-    moreMenuLoggic = true
+    moreMenuLoggic = true;
     moreDropdownMenu.style.display = "flex";
   });
   more.addEventListener("click", function () {
@@ -41,14 +42,30 @@ document.addEventListener("DOMContentLoaded", function () {
     moreDropdownMenu.style.display = moreMenuLoggic ? "flex" : "none";
   });
   moreDropdownMenuOptions.addEventListener("mouseout", function () {
-    moreMenuLoggic = false
+    moreMenuLoggic = false;
     moreDropdownMenu.style.display = "none";
   });
   moreDropdownMenuOptions.addEventListener("mouseover", function () {
-    moreMenuLoggic = true
+    moreMenuLoggic = true;
     moreDropdownMenu.style.display = "flex";
   });
+  allDivs.forEach((els) => {
+    if (!els.hasAttribute("class", "languageButton")) {
+      els.classList.add("hidden");
+    }
+  });
 
+  const hiddenElements = document.querySelectorAll(".hidden");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  hiddenElements.forEach((el) => observer.observe(el));
   console.log(moreDropdownMenu);
   console.log(moreDropdownMenu);
 });
