@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const languageActiveButton = document.getElementById("languageActiveButton");
   const allDivs = document.querySelectorAll("div");
+  const home = document.getElementById("home");
   const languageInActiveButtons = document.getElementById(
     "languageInactiveButtons",
   );
@@ -14,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let languages = ["English", "Русский", "O'zbek"];
   let languageDropdown = false;
   let moreMenuLoggic = false;
+  let menuIconOpened = false;
+
   for (let index = 0; index < languageButtons.length; index++) {
     const button = languageButtons[index];
     const activeLanguage = languages[0];
@@ -49,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
     moreMenuLoggic = true;
     moreDropdownMenu.style.display = "flex";
   });
+
   allDivs.forEach((els) => {
-    if (!els.hasAttribute("class", "languageButton")) {
+    if (!els.classList.contains("notHidden")) {
       els.classList.add("hidden");
     }
   });
@@ -58,14 +62,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const hiddenElements = document.querySelectorAll(".hidden");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      console.log(entry);
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
       }
     });
   });
 
+  const menuIcon = this.getElementsByClassName("menu-icon")[0];
+  menuIcon.addEventListener("click", () => {
+    menuIconOpened = !menuIconOpened;
+    if (menuIconOpened) {
+      menuIcon.classList.add("menu-icon-opened");
+    } else {
+      menuIcon.classList.remove("menu-icon-opened");
+    }
+  });
   hiddenElements.forEach((el) => observer.observe(el));
-  console.log(moreDropdownMenu);
-  console.log(moreDropdownMenu);
 });

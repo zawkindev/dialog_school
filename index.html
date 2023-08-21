@@ -3,127 +3,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Lovers Quarrel'"> -->
+
     <title>Dialog School</title>
   </head>
+
   <body>
-    <div id="home" class="prevent-select hidden">
-      <header class="f-r container">
-        <div id="header-left" class="f-r center hover-cyan">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            class="icon"
-          >
-            <path
-              d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-            />
-          </svg>
-          <a>noreply@gmail.com</a>
-        </div>
-        <div id="header-right" class="f-r">
-          <div class="f-r center">
-            <div id="languageDropdownMenu" class="prevent-select">
-              <div id="languageActiveButton" class="f-r languageButton">
-                <span style="margin-right: 5px">English</span>
-                <svg
-                  style="margin-top: 5px"
-                  width="20px"
-                  height="20px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
-                  />
-                </svg>
-              </div>
-              <div id="languageInactiveButtons">
-                <div
-                  class="languageButton inActiveLanguageButton f-r center p-b-5"
-                >
-                  <span>English</span>
-                </div>
-                <div
-                  class="languageButton inActiveLanguageButton f-r center p-b-5"
-                >
-                  <span>Русский</span>
-                </div>
-                <div
-                  class="languageButton inActiveLanguageButton f-r center p-b-5"
-                >
-                  <span>O'zbek</span>
-                </div>
-              </div>
-            </div>
-            <div id="Tashkent" class="hover-cyan">
-              <div>
-                <svg
-                  class="icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-map-pin"
-                >
-                  <path
-                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-                  ></path>
-                  <circle cx="12" cy="10" r="3"></circle></svg
-                ><span>Tashkent</span>
-              </div>
+    <header class="f-r container">
+      <div id="header-left" class="f-r center hover-cyan">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="icon"
+        >
+          <path
+            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+          />
+        </svg>
+        <a>noreply@gmail.com</a>
+      </div>
+      <div id="header-right" class="f-r">
+        <div class="f-r center">
+          <div id="tashkent" class="hover-cyan">
+            <div>
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-map-pin"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle></svg
+              ><span>Tashkent</span>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <div id="navbar" class="container f-r jc-sb p-b-5 upperCase">
-        <div class="upperCase" id="navbar-right">
-          <a class="m-h-5 hover-cyan"  onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-           ><span class="hover-cyan">home </span></a
+    <div class="menu-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M4 6H20M4 12H14M4 18H9"
+          stroke="#6000ff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <div id="home" class="prevent-select hidden">
+      <div id="languageDropdownMenu" class="prevent-select">
+        <div id="languageActiveButton" class="f-r languageButton center">
+          <span>English</span>
+        </div>
+        <div id="languageInactiveButtons">
+          <div class="languageButton inActiveLanguageButton f-r center">
+            English
+          </div>
+          <div class="languageButton inActiveLanguageButton f-r center">
+            Русский
+          </div>
+          <div class="languageButton inActiveLanguageButton f-r center">
+            O'zbek
+          </div>
+        </div>
+      </div>
+      <div id="navbar" class="container upperCase">
+        <div class="upperCase" id="navbar-left">
+          <a
+            class="hover-cyan"
+            onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+            ><span class="hover-cyan">home </span></a
           >
-          <a class="m-h-5 hover-cyan" onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
- 
+          <a
+            class="hover-cyan"
+            onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
             ><span class="hover-cyan">services</span></a
           >
-          <a class="m-h-5 hover-cyan" onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-
+          <a
+            class="hover-cyan"
+            onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
             ><span class="hover-cyan">about us</span></a
           >
         </div>
-        <h1 class="main-color">Dialog School</h1>
-        <div class="upperCase f-r m-h-15">
-          <a onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
- class="m-h-5 hover-cyan"
+        <span
+          style="
+            font-size: 5em;
+            font-family: CabinSketch;
+            text-transform: capitalize;
+            margin: auto;
+          "
+          class="main-color"
+          >Dialog School</span
+        >
+        <div class="upperCase" id="navbar-right">
+          <a
+            onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+            class="hover-cyan"
             ><span class="hover-cyan">gallery</span></a
           >
-          <a onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
- class="m-h-5 hover-cyan"
+          <a
+            onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+            class="hover-cyan"
             ><span class="hover-cyan">videos</span></a
           >
-          <div id="dropdownFix"></div>
           <div class="hover-cyan" id="more">
-            <div class="f-r">
-              <span style="margin-right: 0">more</span>
-              <svg
-                style="padding-right: 5px; padding-top: 3px"
-                width="22px"
-                1
-                height="22px"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
-                />
-              </svg>
-            </div>
+            <span>more</span>
+            <svg
+              width="22px"
+              height="22px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+              />
+            </svg>
           </div>
           <div id="moreDropdownMenu" class="t-t-none p-absolute">
             <div class="arrow-top"></div>
@@ -138,7 +141,6 @@
                 >Testimonals</span
               >
               <span
-               
                 onclick='document.getElementById("contact_us").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
                 class="prevent-select moreMenuOption"
                 style="
@@ -152,7 +154,15 @@
         </div>
       </div>
     </div>
-
+    <div id="m-navbar">
+    <ul>
+     <li></li> 
+     <li></li> 
+     <li></li> 
+     <li></li> 
+     <li></li> 
+    </ul>  
+    </div>
     <div id="services" class="container center m-t-150 hidden">
       <span class="main-color" style="font-size: 30px; font-weight: 900"
         >Services</span
@@ -160,15 +170,7 @@
       <div id="cards" class="w-100 m-t-30 jc-sb">
         <div class="card">
           <div class="card-image" id="audiology">
-            <img
-              src="public/images/audioligy.jpeg"
-              style="
-                height: 90%;
-                width: 150%;
-                margin-left: -25%;
-                padding-top: 30px;
-              "
-            />
+            <img src="public/images/audioligy.jpeg" class="service-img" />
           </div>
           <div class="card-text">
             <h3 class="m-b-15" style="font-weight: 500">Audiology</h3>
@@ -181,10 +183,7 @@
         </div>
         <div class="card" id="group-therapy">
           <div class="card-image">
-            <img
-              src="public/images/group_therapy.jpeg"
-              style="height: 100%; width: 150%; margin-left: -30%"
-            />
+            <img src="public/images/group_therapy.jpeg" class="service-img" />
           </div>
           <div class="card-text">
             <h3 class="m-b-15" style="font-weight: 500">Group therapy</h3>
@@ -199,15 +198,15 @@
           <div class="card-image">
             <img
               src="public/images/individual_therapy.svg"
-              style="height: 115%; width: 140%; margin-left: -25%"
+              class="service-img"
             />
           </div>
           <div class="card-text">
-            <h3 class="m-b-15" style="font-weight: 500">Individual therapy</h3>
+            <h3 class="m-b-15" style="font-weight: 500">Individual Classes</h3>
             <p class="p-5">
               Through a collaborative therapeutic relationship, clients can gain
-              self-awareness, develop healthy coping mechanisms, and experience
-              long-lasting positive change.
+              } self-awareness, develop healthy coping mechanisms, and
+              experience long-lasting positive change.
             </p>
           </div>
         </div>
@@ -215,12 +214,7 @@
           <div class="card-image">
             <img
               src="public/images/diagnostic_evaluations.webp"
-              style="
-                height: 120%;
-                width: 160%;
-                margin-left: -35%;
-                margin-top: -10px;
-              "
+              class="service-img"
             />
           </div>
           <div class="card-text">
@@ -241,10 +235,7 @@
         >About Us</span
       >
       <div>
-        <img
-          src="public/images/about_us.png"
-          style="margin: auto; width: 580px; height: 425px"
-        />
+        <img src="public/images/about_us.png" class="about_us-img" />
       </div>
       <p class="p-5">
         We pride ourselves in providing exceptional services for all
@@ -267,7 +258,8 @@
         "
         >Gallery</span
       >
-      <div class="f-r f-w jc-se">
+      <div class="gallery">
+        <div class="gallery_photo"></div>
         <div class="gallery_photo"></div>
         <div class="gallery_photo"></div>
         <div class="gallery_photo"></div>
@@ -281,27 +273,59 @@
         style="
           font-size: 30px;
           padding-bottom: 60px;
-          font-weight: 900;
+          font-weight: 700;
           margin-bottom: 30px;
         "
         >Videos</span
       >
-      <div class="f-r m-t-30 f-w jc-se">
-        <div class="video">
-          <iframe style="border-radius:15px;"  width="100%" height="100%" src="https://www.youtube.com/embed/6MWz1j2Teks?autoplay=1&mute=1&loop=1" title="Sara&#39;s Story - Doctor of Audiology (AuD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="m-t-30 videos">
+        <div>
+          <iframe
+            style="border-radius: 15px"
+            class="video"
+            src="https://www.youtube.com/embed/6MWz1j2Teks?autoplay=1&mute=1&loop=1"
+            title="Sara&#39;s Story - Doctor of Audiology (AuD)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="video">
-          <iframe style="border-radius:15px;"  width="100%" height="100%" src="https://www.youtube.com/embed/jFGHX5TPXPo?autoplay=1&mute=1&loop=1" title="Speech Therapy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div>
+          <iframe
+            class="video"
+            style="border-radius: 15px"
+            src="https://www.youtube.com/embed/jFGHX5TPXPo?autoplay=1&mute=1&loop=1"
+            title="Speech Therapy"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="video">
-          <iframe style="border-radius:15px;"  width="100%" height="100%" src="https://www.youtube.com/embed/JBoc3w5EKfI?autoplay=1&mute=1&loop=1" title="Group Therapy for Autism Spectrum Disorder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div>
+          <iframe
+            class="video"
+            style="border-radius: 15px"
+            src="https://www.youtube.com/embed/JBoc3w5EKfI?autoplay=1&mute=1&loop=1"
+            title="Group Therapy for Autism Spectrum Disorder"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="video">
-          <iframe style="border-radius:15px;"  width="100%" height="100%" src="https://www.youtube.com/embed/HIpHWwqOQsk?autoplay=1&mute=1&loop=1" title="How to diagnose asthma - what NICE says" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div>
+          <iframe
+            class="video"
+            style="border-radius: 15px"
+            src="https://www.youtube.com/embed/HIpHWwqOQsk?autoplay=1&mute=1&loop=1"
+            title="How to diagnose asthma - what NICE says"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
 
-    <script defer src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

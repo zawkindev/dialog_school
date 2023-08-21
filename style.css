@@ -1,14 +1,19 @@
 * {
   font-family: Muli, "Helvetica Light", Arial, sans-serif;
+  font-size: 16px;
   margin: 0%;
   padding: 0%;
 }
 
 @font-face {
-  font-family: Muli;
-  src: url(public/fonts/muli/Muli-Light.ttf);
+  font-family: Acme;
+  src: url(public/fonts/Acme-Regular.ttf);
 }
 
+@font-face {
+  font-family: CabinSketch;
+  src: url(public/fonts/LoversQuarrel-Regular.ttf);
+}
 .icon {
   width: 15px;
   height: 15px;
@@ -19,20 +24,21 @@
 .f-r {
   display: flex;
   flex-direction: row;
+  gap: 1em;
 }
 .hover-cyan:hover {
   fill: #6000ff;
   color: #6000ff;
 }
 .container {
-  width: 91vw;
+  width: 90vw;
   margin: auto;
 }
 
 .center {
   align-items: center;
   justify-content: center;
-  text-align:center;
+  text-align: center;
 }
 
 header {
@@ -40,6 +46,9 @@ header {
   align-items: center;
   padding: 10px;
   font-size: smaller;
+}
+#header-left {
+  margin-left: min(0.1vw, 1rem);
 }
 .m-h-15 {
   margin-right: 15px;
@@ -78,17 +87,16 @@ header {
   fill: #6000ff;
 }
 
-#header-left {
-  margin-left: 100px;
-}
-
 #languageDropdownMenu {
   display: flex;
+  position: absolute;
+  top: -7%;
+  right: 20vw;
   flex-direction: column;
   margin-right: 50px;
   font-size: 16px;
   cursor: default;
-  width: 80px;
+  z-index: 9999999999;
 }
 #languageActiveButton {
   border-radius: 5px;
@@ -106,11 +114,10 @@ header {
 .languageButton {
   color: #6000ff;
   text-align: center;
-  /* border-radius: 5px; */
   padding-right: 5px;
   padding-left: 5px;
   height: 30px;
-  width: 80px;
+  width: 4rem;
 }
 
 .languageButton:hover {
@@ -126,7 +133,8 @@ header {
   flex-direction: column;
   background-color: #eef1f0;
   border: 1px solid #6000ff;
-  border-radius: 5px;
+  border-radius: 4px;
+  /*  z-index:99999999999999;*/
 }
 
 .prevent-select {
@@ -138,9 +146,22 @@ header {
 #navbar {
   height: 90px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
-
+#navbar-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+#navbar-right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
 .upperCase {
   text-transform: uppercase;
 }
@@ -153,8 +174,8 @@ header {
   justify-content: space-between;
 }
 
-.jc-se{
-  justify-content:space-evenly;
+.jc-se {
+  justify-content: space-evenly;
 }
 
 .jc-sa {
@@ -172,7 +193,7 @@ header {
 
 #more {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .arrow-top {
   z-index: 9999999;
@@ -186,13 +207,11 @@ header {
 
 #home {
   height: 600px;
-  width: 100%;
   background-image: url(public/images/background.png);
-  background-size: 1000px 1000px;
   background-repeat: no-repeat;
-  background-position: 0px -110px;
+  background-position: left;
+  background-size: min(64vw, 100%), max(80%, 30vh);
   box-shadow: 0 2px 5px -2px gray;
-
 }
 
 .center {
@@ -243,108 +262,192 @@ header {
   color: white;
 }
 
-w-100 {
+.w-100 {
   width: 100%;
 }
 
-#cards{
-  display:flex;
-  flex-direction:row;
-  
+#cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 2em;
 }
 
-.card{
-  width:250px;
-  margin:auto;
-  flex-direction:column;
+.card {
+  width: 250px;
+  margin: auto;
+  flex-direction: column;
 }
 
-.card-image{
-  width:80%;
-  height:200px;
-  margin:auto;
-  margin-top:10px;
-  border-radius:20px;
-}
-.card-text{
+.card-text {
   margin-top: 5%;
-  width:100%;
-  height:250px;
- text-align:center;
+  width: 100%;
+  height: 250px;
+  text-align: center;
 }
 
-.m-b-15{
-  margin-bottom:15px;
+.m-b-15 {
+  margin-bottom: 15px;
 }
 
-.w-80{
-  width:80%;
+.w-80 {
+  width: 80%;
 }
 
-.p-10{
-  padding:10px;
+.p-10 {
+  padding: 10px;
 }
-.p-5{
-  padding:5px;
+.p-5 {
+  padding: 5px;
 }
-.m-t-30{
-  margin-top:30px;
+.m-t-30 {
+  margin-top: 30px;
 }
 
-.m-t-60{
-  margin-top:60px;
+.m-t-60 {
+  margin-top: 60px;
 }
-.m-b-60{
-  margin-bottom:60px;
+.m-b-60 {
+  margin-bottom: 60px;
 }
-.m-v-60{
-  margin-bottom:60px;
-  margin-top:60px;
+.m-v-60 {
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
-.m-b-30{
-  margin-bottom:30px;
+.m-b-30 {
+  margin-bottom: 30px;
 }
-.m-t-150{
-  margin-top:150px;
+.m-t-150 {
+  margin-top: 150px;
 }
-#audioligy{
+#audioligy {
   background-image: url(public/images/audioligy.jpeg);
-  background-position:cover;
+  background-position: cover;
   background-repeat: no-repeat;
 }
 
-.gallery_photo{
-  width:415px;
-  height:225px;
-  margin-top:15px;
-  border-radius:15px;
-  background-color:#6000ff;
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
 }
 
-.video{
-  width:640px;
-  height:300px;
-  margin-top:15px;
-  border-radius:15px;
-  background-color:#000000;
+.gallery_photo {
+  width: 300px;
+  height: 215px;
+  /*  margin-inline: auto;*/
+  margin-top: 15px;
+  border-radius: 15px;
+  background-color: #6000ff;
 }
 
-.f-w{
+.videos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.video {
+  min-width: max(40vw, 200px);
+  min-height: max(20vw, 200px);
+  border-radius: 15px;
+}
+
+.f-w {
   flex-wrap: wrap;
 }
 
-
-
-
-.hidden{
+.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
   transition: all 1s;
 }
-.show{
+.show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
 }
 
+.service-img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.about_us-img {
+  max-width: 80vw;
+  max-height: max(30vw, 200px);
+}
+
+.menu-icon {
+  position: absolute;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  fill: #6000ff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon-opened {
+  position: absolute;
+  flex-direction: column;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 5rem;
+  background-color: #6000ff;
+  color: #eef1f0;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 12px;
+  }
+  #header-left {
+    display: none;
+  }
+  #navbar{
+    display: flex;
+    flex-direction: column;
+  }
+  #navbar-left {
+    display: none;
+  }
+  #navbar-right {
+    display: none;
+  }
+
+  #tashkent {
+    display: none;
+  }
+  #languageDropdownMenu {
+    top: -1.5em;
+    left: 0.5em;
+    margin-right: 0;
+  }
+  #home {
+    height: 35rem;
+    background-position: center;
+    background-size: 100%, auto;
+  }
+  .m-b-30 {
+    margin-bottom: 15px;
+  }
+  .m-b-15 {
+    margin-bottom: 5px;
+  }
+  .menu-icon {
+    display: block;
+    top:0;
+    padding-right: 0.5em;
+    padding-top: 0.5rem;
+  }
+}
