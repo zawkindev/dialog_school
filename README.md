@@ -2,7 +2,8 @@
 ![](./screen.png?raw=true)
 
 <hr />
-**Mobile version:**
+
+<h1>Mobile version:</h1>
 
 ![](./m-screenshot.png?raw=true)
 ![](./m-screen.png?raw=true)
