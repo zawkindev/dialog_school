@@ -68,13 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const menuIcon = this.getElementsByClassName("menu-icon")[0];
+  const menuIcon = document.getElementsByClassName("menu-icon")[0];
+  const mNavbar = document.querySelector("#m-navbar");
+  const menuIconSvg = document.getElementsByClassName("menu-icon-svg")[0];
+
   menuIcon.addEventListener("click", () => {
     menuIconOpened = !menuIconOpened;
     if (menuIconOpened) {
-      menuIcon.classList.add("menu-icon-opened");
+      mNavbar.style.display = "flex";
+      menuIconSvg.style.stroke = "#eef1f0"
+      menuIconSvg.style.backgroundColor = "#6000ff"
+
     } else {
-      menuIcon.classList.remove("menu-icon-opened");
+      mNavbar.style.display = "none";
+      menuIconSvg.style.stroke = "#6000ff"
+      menuIconSvg.style.backgroundColor = ""
     }
   });
   hiddenElements.forEach((el) => observer.observe(el));
