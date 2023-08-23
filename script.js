@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const moreDropdownMenuOptions =
     document.getElementsByClassName("moreMenuOptions")[0];
   const more = document.getElementById("more");
+  const menuIcon = document.getElementsByClassName("menu-icon")[0];
+  const mNavbar = document.querySelector("#m-navbar");
+  const menuIconSvg = document.getElementsByClassName("menu-icon-svg")[0];
+  const mNavbarOptions = document.getElementsByClassName("m-navbar-option");
 
   let languages = ["English", "Русский", "O'zbek"];
   let languageDropdown = false;
@@ -68,21 +72,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const menuIcon = document.getElementsByClassName("menu-icon")[0];
-  const mNavbar = document.querySelector("#m-navbar");
-  const menuIconSvg = document.getElementsByClassName("menu-icon-svg")[0];
+  for (let i = mNavbarOptions.length - 1; i >= 0; i--) {
+    mNavbarOptions[i].addEventListener("click", function () {
+      menuIconOpened = !menuIconOpened;
+      if (menuIconOpened) {
+        mNavbar.style.display = "flex";
+        menuIconSvg.style.stroke = "#eef1f0";
+        menuIconSvg.style.backgroundColor = "#6000ff";
+      } else {
+        mNavbar.style.display = "none";
+        menuIconSvg.style.stroke = "#6000ff";
+        menuIconSvg.style.backgroundColor = "";
+      }
+    });
+  }
 
   menuIcon.addEventListener("click", () => {
     menuIconOpened = !menuIconOpened;
     if (menuIconOpened) {
       mNavbar.style.display = "flex";
-      menuIconSvg.style.stroke = "#eef1f0"
-      menuIconSvg.style.backgroundColor = "#6000ff"
-
+      menuIconSvg.style.stroke = "#eef1f0";
+      menuIconSvg.style.backgroundColor = "#6000ff";
     } else {
       mNavbar.style.display = "none";
-      menuIconSvg.style.stroke = "#6000ff"
-      menuIconSvg.style.backgroundColor = ""
+      menuIconSvg.style.stroke = "#6000ff";
+      menuIconSvg.style.backgroundColor = "";
     }
   });
   hiddenElements.forEach((el) => observer.observe(el));
