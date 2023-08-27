@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  const siteEmail = "zawkindev@gmail.com"
+
   const languageActiveButton = document.getElementById("languageActiveButton");
   const allDivs = document.querySelectorAll("div");
-  const home = document.getElementById("home");
+  const submitButton = document.getElementById("submit-button");
+  const form = document.getElementById("contact");
   const languageInActiveButtons = document.getElementById(
     "languageInactiveButtons",
   );
@@ -100,4 +104,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   hiddenElements.forEach((el) => observer.observe(el));
+
+  function sendEmail(sender,receiver,body) {
+    Email.send({
+      Host: "smtp.gmail.com",
+      To: receiver,
+      From: sender,
+      Subject: "Email from Dialog School website",
+      Body: body,
+    }).then(function (message) {
+      alert("mail sent successfully");
+      console.log(message)
+    });
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let fullName = document.getElementById("full-name");
+    let mobileNumber = document.getElementById("mobile-number");
+    let emailID = document.getElementById("email-id");
+    let textArea = document.getElementById("message-text");
+
+    if (
+      mobileNumber.value == "" ||
+      emailID.value == "" ||
+      textArea.value == ""
+    ) {
+      alert("Ensure you input a value in both fields!");
+    } else {
+      console.log(emailID.value)
+      console.log(emailID.value)
+      sendEmail(emailID.value,siteEmail,textArea.value)
+      alert("This form has been successfully submitted!");
+
+      fullName.value = "";
+      mobileNumber.value = "";
+      emailID.value = "";
+      textArea.value = "";
+    }
+  });
 });

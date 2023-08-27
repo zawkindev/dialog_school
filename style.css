@@ -271,7 +271,7 @@ header {
 #cards {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 4vw;
   flex-wrap: wrap;
   margin: auto;
   padding-top: 2em;
@@ -286,7 +286,7 @@ header {
 .card-text {
   margin-top: 5%;
   width: 100%;
-  height: 250px;
+  height: 150px;
   text-align: center;
 }
 
@@ -341,7 +341,6 @@ header {
 .gallery_photo {
   width: 300px;
   height: 215px;
-  /*  margin-inline: auto;*/
   margin-top: 15px;
   border-radius: 15px;
   background-color: #6000ff;
@@ -352,12 +351,13 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  width: 90vw;
   gap: 1em;
 }
 
 .video {
-  min-width: max(40vw, 200px);
-  min-height: max(20vw, 200px);
+  width: min(90vw, 450px);
+  min-height: max(19vw, 20rem);
   border-radius: 15px;
 }
 
@@ -439,7 +439,18 @@ header {
   background-color: #6000ff;
 }
 
-@media only screen and (min-width:641px) and (max-width:1007px){
+.floating-icon {
+  width: 3rem;
+  height: 3rem;
+  position: sticky;
+  top: 30rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+  float: right;
+  z-index: 999999999999999;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
   #home {
     height: 35rem;
     background-position: center;
@@ -467,7 +478,7 @@ header {
     left: 0.5em;
     margin-right: 0;
   }
- 
+
   .m-b-30 {
     margin-bottom: 15px;
   }
@@ -525,4 +536,53 @@ header {
     padding-right: 0.5em;
     padding-top: 0.5rem;
   }
+}
+
+.f-c {
+  display: flex;
+  flex-direction: column;
+}
+.input-info {
+  min-width: max(30vw, 20rem);
+  height: 2rem;
+  margin: 0.5rem;
+  outline: 0;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  padding-inline: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+::placeholder {
+  color: #999;
+  opacity: 0.8;
+}
+.f-w {
+  flex-wrap: wrap;
+}
+.m-t-10r {
+  margin-top: 10rem;
+}
+#submit-button {
+  padding: 16px;
+  padding-inline: 32px;
+  background-color: #6000ff;
+  color: #eef1f0;
+  font-weight: 500;
+  border-radius: 5rem;
+  font-size: 18px;
+  outline: 0;
+  border: 0;
+}
+
+#submit-button:hover {
+  background-color: #eef1f0;
+  color: #6000ff;
+  cursor: pointer;
+  border: 1px solid #6000ff;
+}
+
+#inputs {
+  max-width: 70vw;
+  margin-inline: auto;
 }

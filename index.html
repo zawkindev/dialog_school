@@ -3,7 +3,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Lovers Quarrel'"> -->
 
     <title>Dialog School</title>
   </head>
@@ -39,7 +38,13 @@
         onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth"});'
       >
         videos
+      </li><li
+        class="capitalize m-navbar-option"
+        onclick='document.getElementById("contact").scrollIntoView({ behavior: "smooth"});'
+      >
+      Contact Us
       </li>
+
     </ul>
     <header class="f-r container">
       <div id="header-left" class="f-r center hover-cyan">
@@ -190,19 +195,22 @@
         </div>
       </div>
     </div>
+    <!-- <a href="https://t.me/dialog_school"> -->
+    <!--   <img class="floating-icon" src="public/images/telegram.png" /> -->
+    <!-- </a> -->
 
-    <div id="services" class="container center m-t-150 hidden">
-      <span class="main-color" style="font-size: 30px; font-weight: 900"
+    <div id="services" class="container center m-t-60 hidden">
+      <span class="main-color w-100" style="font-size: 30px; font-weight: 900; text-align: center;margin-inline: auto;"
         >Services</span
       >
-      <div id="cards" class="w-100 m-t-30 jc-sb">
+      <div id="cards" class="w-100 m-t-30">
         <div class="card">
           <div class="card-image" id="audiology">
             <img src="public/images/audioligy.jpeg" class="service-img" />
           </div>
           <div class="card-text">
             <h3 class="m-b-15" style="font-weight: 500">Audiology</h3>
-            <p class="p-5">
+            <p class="">
               Our audiology services offer comprehensive diagnostic testing and
               personalized treatment options to help individuals regain their
               quality of life and improve their communication abilities.
@@ -215,7 +223,7 @@
           </div>
           <div class="card-text">
             <h3 class="m-b-15" style="font-weight: 500">Group therapy</h3>
-            <p class="p-5">
+            <p class="">
               Our expert therapists create a safe and inclusive space for
               individuals to grow, heal, and navigate their personal journeys
               towards lasting positive change.
@@ -231,9 +239,9 @@
           </div>
           <div class="card-text">
             <h3 class="m-b-15" style="font-weight: 500">Individual Classes</h3>
-            <p class="p-5">
+            <p class="">
               Through a collaborative therapeutic relationship, clients can gain
-              } self-awareness, develop healthy coping mechanisms, and
+              self-awareness, develop healthy coping mechanisms, and
               experience long-lasting positive change.
             </p>
           </div>
@@ -249,7 +257,7 @@
             <h3 class="m-b-15" style="font-weight: 500">
               Diagnostic evaluations
             </h3>
-            <p class="p-5">
+            <p class="">
               Our team of experienced clinicians utilizes a combination of
               standardized tests, interviews, and clinical observations to
               gather information and provide accurate diagnoses.
@@ -275,7 +283,7 @@
         loved ones.
       </p>
     </div>
-    <div id="gallery" class="container center m-t-150 m-b-60 hidden">
+    <div id="gallery" class="container center m-t-10r m-b-60 hidden">
       <span
         class="main-color m-b-30"
         style="
@@ -295,7 +303,7 @@
         <div class="gallery_photo"></div>
       </div>
     </div>
-    <div id="videos" class="container center m-t-150 m-b-60 hidden">
+    <div id="videos" class="container center m-t-10r m-b-60 hidden">
       <span
         class="main-color m-b-30"
         style="
@@ -353,7 +361,38 @@
         </div>
       </div>
     </div>
+    <form id="contact" class="center m-t-15 m-b-30 hidden prevent-select">
+      <span class="main-color" style="font-size: 30px; font-weight: 900"
+        >Contact Us</span
+      >
+      <div id="inputs" class="w-100 m-t-30 center f-r f-w">
+        <div class="f-c center">
+          <input id="full-name" class="input-info" type="text" placeholder="Full Name" />
+          <input
+            id="mobile-number"
+            class="input-info"
+            type="tel"
+            pattern="^[+]?998([0-9][012345789]|[0-9][125679]|7[01234569])[0-9]{7}$"
+            required
+            placeholder="Mobile Number"
+          />
+          <input
+            id="email-id"
+            class="input-info"
+            type="email"
+            required
+            placeholder="Email ID"
+          />
+        </div>
+        <textarea id="message-text" class="input-info" style="height: 11rem; padding-top: 0.5rem; resize: none;" required rows="3" placeholder="Message" seleniumid="sel_srcBox""></textarea>
+        <button type="submit" id="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./script.js"></script>
+
   </body>
 </html>
