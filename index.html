@@ -1,14 +1,288 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
 
-    <title>Dialog School</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <ul id="m-navbar">
+  <title>Dialog School</title>
+</head>
+
+<body>
+  <ul id="m-navbar">
+    <li class="capitalize m-navbar-option"
+      onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'>
+      home
+    </li>
+    <li class="capitalize m-navbar-option"
+      onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth"});'>
+      services
+    </li>
+    <li class="m-navbar-option" onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth"});'>
+      About us
+    </li>
+    <li class="capitalize m-navbar-option"
+      onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth"});'>
+      gallery
+    </li>
+    <li class="capitalize m-navbar-option"
+      onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth"});'>
+      videos
+    </li>
+    <li class="capitalize m-navbar-option"
+      onclick='document.getElementById("contact").scrollIntoView({ behavior: "smooth"});'>
+      Contact Us
+    </li>
+
+  </ul>
+  <header class="f-r container">
+    <div id="header-left" class="f-r center hover-cyan">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon">
+        <path
+          d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+      </svg>
+      <a>noreply@gmail.com</a>
+    </div>
+    <div id="header-right" class="f-r">
+      <div class="f-r center">
+        <div id="tashkent" class="hover-cyan">
+          <div>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg><span>Tashkent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="menu-icon-svg">
+      <path d="M4 6H20M4 12H14M4 18H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <div id="home" class="prevent-select hidden">
+    <div id="languageDropdownMenu" class="prevent-select">
+      <div id="languageActiveButton" class="f-r languageButton center">
+        <span>English</span>
+      </div>
+      <div id="languageInactiveButtons">
+        <div class="languageButton inActiveLanguageButton f-r center">
+          English
+        </div>
+        <div class="languageButton inActiveLanguageButton f-r center">
+          Русский
+        </div>
+        <div class="languageButton inActiveLanguageButton f-r center">
+          O'zbek
+        </div>
+      </div>
+    </div>
+    <div id="navbar" class="container upperCase">
+      <div class="upperCase" id="navbar-left">
+        <a class="hover-cyan"
+          onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'><span
+            class="hover-cyan">home </span></a>
+        <a class="hover-cyan"
+          onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'><span
+            class="hover-cyan">services</span></a>
+        <a class="hover-cyan"
+          onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'><span
+            class="hover-cyan">about us</span></a>
+      </div>
+      <span style="
+            font-size: 5em;
+            font-family: CabinSketch;
+            text-transform: capitalize;
+            margin-inline: auto;
+          " class="main-color">Dialog School</span>
+      <div class="upperCase" id="navbar-right">
+        <a onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+          class="hover-cyan"><span class="hover-cyan">gallery</span></a>
+        <a onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+          class="hover-cyan"><span class="hover-cyan">videos</span></a>
+        <div class="hover-cyan" id="more">
+          <span>more</span>
+          <svg width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" />
+          </svg>
+        </div>
+        <div id="moreDropdownMenu" class="t-t-none p-absolute">
+          <div class="arrow-top"></div>
+          <div class="p-absolute moreMenuOptions">
+            <span
+              onclick='document.getElementById("testimonals").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+              class="prevent-select moreMenuOption" style="
+                  border-top-left-radius: 5px;
+                  border-top-right-radius: 5px;
+                ">Testimonals</span>
+            <span
+              onclick='document.getElementById("contact_us").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+              class="prevent-select moreMenuOption" style="
+                  border-bottom-left-radius: 5px;
+                  border-bottom-right-radius: 5px;
+                ">Contact Us</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <a href="https://t.me/dialog_school"> -->
+  <!--   <img class="floating-icon" src="public/images/telegram.png" /> -->
+  <!-- </a> -->
+
+  <div id="services" class="container center m-t-60 hidden">
+    <span class="main-color w-100"
+      style="font-size: 30px; font-weight: 900; text-align: center;margin-inline: auto;">Services</span>
+    <div id="cards" class="w-100 m-t-30">
+      <div class="card">
+        <div class="card-image" id="audiology">
+          <img src="public/images/audioligy.jpeg" class="service-img" />
+        </div>
+        <div class="card-text">
+          <h3 class="m-b-15" style="font-weight: 500">Audiology</h3>
+          <p class="">
+            Our audiology services offer comprehensive diagnostic testing and
+            personalized treatment options to help individuals regain their
+            quality of life and improve their communication abilities.
+          </p>
+        </div>
+      </div>
+      <div class="card" id="group-therapy">
+        <div class="card-image">
+          <img src="public/images/group_therapy.jpeg" class="service-img" />
+        </div>
+        <div class="card-text">
+          <h3 class="m-b-15" style="font-weight: 500">Group therapy</h3>
+          <p class="">
+            Our expert therapists create a safe and inclusive space for
+            individuals to grow, heal, and navigate their personal journeys
+            towards lasting positive change.
+          </p>
+        </div>
+      </div>
+      <div class="card" id="individual-therapy">
+        <div class="card-image">
+          <img src="public/images/individual_therapy.svg" class="service-img" />
+        </div>
+        <div class="card-text">
+          <h3 class="m-b-15" style="font-weight: 500">Individual Classes</h3>
+          <p class="">
+            Through a collaborative therapeutic relationship, clients can gain
+            self-awareness, develop healthy coping mechanisms, and
+            experience long-lasting positive change.
+          </p>
+        </div>
+      </div>
+      <div class="card" id="diagnostic evaluations">
+        <div class="card-image">
+          <img src="public/images/diagnostic_evaluations.webp" class="service-img" />
+        </div>
+        <div class="card-text">
+          <h3 class="m-b-15" style="font-weight: 500">
+            Diagnostic evaluations
+          </h3>
+          <p class="">
+            Our team of experienced clinicians utilizes a combination of
+            standardized tests, interviews, and clinical observations to
+            gather information and provide accurate diagnoses.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about" class="container center m-t-60 m-b-30 hidden">
+    <span class="main-color" style="font-size: 30px; font-weight: 900">About Us</span>
+    <div>
+      <img src="public/images/about_us.png" class="about_us-img" />
+    </div>
+    <p class="p-5">
+      We pride ourselves in providing exceptional services for all
+      rehabilitation needs. By merging innovative service models and
+      technology, we, Medi Physiocare, situated at Kohalli, Aigali, Karnataka,
+      provide special speech tools and expert services for total child
+      development, academic performance, professional speaking and mental
+      health services. Connect with us to see how we can serve you and your
+      loved ones.
+    </p>
+  </div>
+  <div id="gallery" class="container center m-t-10r m-b-60 hidden">
+    <span class="main-color m-b-30" style="
+          font-size: 30px;
+          padding-bottom: 60px;
+          font-weight: 900;
+          margin-bottom: 30px;
+        ">Gallery</span>
+    <div class="gallery">
+      <div class="gallery_photo"></div>
+      <div class="gallery_photo"></div>
+      <div class="gallery_photo"></div>
+      <div class="gallery_photo"></div>
+      <div class="gallery_photo"></div>
+      <div class="gallery_photo"></div>
+    </div>
+  </div>
+  <div id="videos" class="container center m-t-10r m-b-60 hidden">
+    <span class="main-color m-b-30" style="
+          font-size: 30px;
+          padding-bottom: 60px;
+          font-weight: 700;
+          margin-bottom: 30px;
+        ">Videos</span>
+    <div class="m-t-30 videos">
+      <div>
+        <iframe style="border-radius: 15px" class="video"
+          src="https://www.youtube.com/embed/6MWz1j2Teks?autoplay=1&mute=1&loop=1"
+          title="Sara&#39;s Story - Doctor of Audiology (AuD)" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe class="video" style="border-radius: 15px"
+          src="https://www.youtube.com/embed/jFGHX5TPXPo?autoplay=1&mute=1&loop=1" title="Speech Therapy"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe class="video" style="border-radius: 15px"
+          src="https://www.youtube.com/embed/JBoc3w5EKfI?autoplay=1&mute=1&loop=1"
+          title="Group Therapy for Autism Spectrum Disorder" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe class="video" style="border-radius: 15px"
+          src="https://www.youtube.com/embed/HIpHWwqOQsk?autoplay=1&mute=1&loop=1"
+          title="How to diagnose asthma - what NICE says" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <form id="contact" class="center m-t-15 m-b-30 hidden prevent-select">
+    <span class="main-color" style="font-size: 30px; font-weight: 900">Contact Us</span>
+    <div id="inputs" class="w-100 m-t-30 center f-r f-w">
+      <div class="f-c center">
+        <input id="full-name" class="input-info" type="text" placeholder="Full Name" />
+        <input id="mobile-number" class="input-info" type="tel"
+          pattern="^[+]?998([0-9][012345789]|[0-9][125679]|7[01234569])[0-9]{7}$" required
+          placeholder="Mobile Number" />
+        <input id="email-id" class="input-info" type="email" required placeholder="Email ID" />
+      </div>
+      <textarea id="message-text" class="input-info" style="height: 11rem; padding-top: 0.5rem; resize: none;" required
+        rows="3" placeholder="Message" seleniumid="sel_srcBox""></textarea>
+        <button type=" submit" id="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+
+<ul id="m-navbar">
       <li
         class="capitalize m-navbar-option"
         onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
@@ -46,42 +320,9 @@
       </li>
 
     </ul>
-    <header class="f-r container">
-      <div id="header-left" class="f-r center hover-cyan">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          class="icon"
-        >
-          <path
-            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-          />
-        </svg>
+    <div class="f-r container">
         <a>noreply@gmail.com</a>
-      </div>
-      <div id="header-right" class="f-r">
-        <div class="f-r center">
-          <div id="tashkent" class="hover-cyan">
-            <div>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-map-pin"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle></svg
-              ><span>Tashkent</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    </div>
 
     <div class="menu-icon">
       <svg
@@ -98,25 +339,9 @@
       </svg>
     </div>
 
-    <div id="home" class="prevent-select hidden">
-      <div id="languageDropdownMenu" class="prevent-select">
-        <div id="languageActiveButton" class="f-r languageButton center">
-          <span>English</span>
-        </div>
-        <div id="languageInactiveButtons">
-          <div class="languageButton inActiveLanguageButton f-r center">
-            English
-          </div>
-          <div class="languageButton inActiveLanguageButton f-r center">
-            Русский
-          </div>
-          <div class="languageButton inActiveLanguageButton f-r center">
-            O'zbek
-          </div>
-        </div>
-      </div>
-      <div id="navbar" class="container upperCase">
-        <div class="upperCase" id="navbar-left">
+    <div class="prevent-select hidden">
+      <div class="container upperCase">
+        <div class="upperCase">
           <a
             class="hover-cyan"
             onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
@@ -132,18 +357,6 @@
             onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
             ><span class="hover-cyan">about us</span></a
           >
-        </div>
-        <span
-          style="
-            font-size: 5em;
-            font-family: CabinSketch;
-            text-transform: capitalize;
-            margin-inline: auto;
-          "
-          class="main-color"
-          >Dialog School</span
-        >
-        <div class="upperCase" id="navbar-right">
           <a
             onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
             class="hover-cyan"
@@ -154,7 +367,7 @@
             class="hover-cyan"
             ><span class="hover-cyan">videos</span></a
           >
-          <div class="hover-cyan" id="more">
+          <div class="hover-cyan" class="more">
             <span>more</span>
             <svg
               width="22px"
@@ -173,15 +386,6 @@
             <div class="arrow-top"></div>
             <div class="p-absolute moreMenuOptions">
               <span
-                onclick='document.getElementById("testimonals").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-                class="prevent-select moreMenuOption"
-                style="
-                  border-top-left-radius: 5px;
-                  border-top-right-radius: 5px;
-                "
-                >Testimonals</span
-              >
-              <span
                 onclick='document.getElementById("contact_us").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
                 class="prevent-select moreMenuOption"
                 style="
@@ -195,202 +399,6 @@
         </div>
       </div>
     </div>
-    <!-- <a href="https://t.me/dialog_school"> -->
-    <!--   <img class="floating-icon" src="public/images/telegram.png" /> -->
-    <!-- </a> -->
-
-    <div id="services" class="container center m-t-60 hidden">
-      <span class="main-color w-100" style="font-size: 30px; font-weight: 900; text-align: center;margin-inline: auto;"
-        >Services</span
-      >
-      <div id="cards" class="w-100 m-t-30">
-        <div class="card">
-          <div class="card-image" id="audiology">
-            <img src="public/images/audioligy.jpeg" class="service-img" />
-          </div>
-          <div class="card-text">
-            <h3 class="m-b-15" style="font-weight: 500">Audiology</h3>
-            <p class="">
-              Our audiology services offer comprehensive diagnostic testing and
-              personalized treatment options to help individuals regain their
-              quality of life and improve their communication abilities.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="group-therapy">
-          <div class="card-image">
-            <img src="public/images/group_therapy.jpeg" class="service-img" />
-          </div>
-          <div class="card-text">
-            <h3 class="m-b-15" style="font-weight: 500">Group therapy</h3>
-            <p class="">
-              Our expert therapists create a safe and inclusive space for
-              individuals to grow, heal, and navigate their personal journeys
-              towards lasting positive change.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="individual-therapy">
-          <div class="card-image">
-            <img
-              src="public/images/individual_therapy.svg"
-              class="service-img"
-            />
-          </div>
-          <div class="card-text">
-            <h3 class="m-b-15" style="font-weight: 500">Individual Classes</h3>
-            <p class="">
-              Through a collaborative therapeutic relationship, clients can gain
-              self-awareness, develop healthy coping mechanisms, and
-              experience long-lasting positive change.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="diagnostic evaluations">
-          <div class="card-image">
-            <img
-              src="public/images/diagnostic_evaluations.webp"
-              class="service-img"
-            />
-          </div>
-          <div class="card-text">
-            <h3 class="m-b-15" style="font-weight: 500">
-              Diagnostic evaluations
-            </h3>
-            <p class="">
-              Our team of experienced clinicians utilizes a combination of
-              standardized tests, interviews, and clinical observations to
-              gather information and provide accurate diagnoses.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="about" class="container center m-t-60 m-b-30 hidden">
-      <span class="main-color" style="font-size: 30px; font-weight: 900"
-        >About Us</span
-      >
-      <div>
-        <img src="public/images/about_us.png" class="about_us-img" />
-      </div>
-      <p class="p-5">
-        We pride ourselves in providing exceptional services for all
-        rehabilitation needs. By merging innovative service models and
-        technology, we, Medi Physiocare, situated at Kohalli, Aigali, Karnataka,
-        provide special speech tools and expert services for total child
-        development, academic performance, professional speaking and mental
-        health services. Connect with us to see how we can serve you and your
-        loved ones.
-      </p>
-    </div>
-    <div id="gallery" class="container center m-t-10r m-b-60 hidden">
-      <span
-        class="main-color m-b-30"
-        style="
-          font-size: 30px;
-          padding-bottom: 60px;
-          font-weight: 900;
-          margin-bottom: 30px;
-        "
-        >Gallery</span
-      >
-      <div class="gallery">
-        <div class="gallery_photo"></div>
-        <div class="gallery_photo"></div>
-        <div class="gallery_photo"></div>
-        <div class="gallery_photo"></div>
-        <div class="gallery_photo"></div>
-        <div class="gallery_photo"></div>
-      </div>
-    </div>
-    <div id="videos" class="container center m-t-10r m-b-60 hidden">
-      <span
-        class="main-color m-b-30"
-        style="
-          font-size: 30px;
-          padding-bottom: 60px;
-          font-weight: 700;
-          margin-bottom: 30px;
-        "
-        >Videos</span
-      >
-      <div class="m-t-30 videos">
-        <div>
-          <iframe
-            style="border-radius: 15px"
-            class="video"
-            src="https://www.youtube.com/embed/6MWz1j2Teks?autoplay=1&mute=1&loop=1"
-            title="Sara&#39;s Story - Doctor of Audiology (AuD)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <iframe
-            class="video"
-            style="border-radius: 15px"
-            src="https://www.youtube.com/embed/jFGHX5TPXPo?autoplay=1&mute=1&loop=1"
-            title="Speech Therapy"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <iframe
-            class="video"
-            style="border-radius: 15px"
-            src="https://www.youtube.com/embed/JBoc3w5EKfI?autoplay=1&mute=1&loop=1"
-            title="Group Therapy for Autism Spectrum Disorder"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <iframe
-            class="video"
-            style="border-radius: 15px"
-            src="https://www.youtube.com/embed/HIpHWwqOQsk?autoplay=1&mute=1&loop=1"
-            title="How to diagnose asthma - what NICE says"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </div>
-    <form id="contact" class="center m-t-15 m-b-30 hidden prevent-select">
-      <span class="main-color" style="font-size: 30px; font-weight: 900"
-        >Contact Us</span
-      >
-      <div id="inputs" class="w-100 m-t-30 center f-r f-w">
-        <div class="f-c center">
-          <input id="full-name" class="input-info" type="text" placeholder="Full Name" />
-          <input
-            id="mobile-number"
-            class="input-info"
-            type="tel"
-            pattern="^[+]?998([0-9][012345789]|[0-9][125679]|7[01234569])[0-9]{7}$"
-            required
-            placeholder="Mobile Number"
-          />
-          <input
-            id="email-id"
-            class="input-info"
-            type="email"
-            required
-            placeholder="Email ID"
-          />
-        </div>
-        <textarea id="message-text" class="input-info" style="height: 11rem; padding-top: 0.5rem; resize: none;" required rows="3" placeholder="Message" seleniumid="sel_srcBox""></textarea>
-        <button type="submit" id="submit-button">
-          Submit
-        </button>
-      </div>
-    </form>
-
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./script.js"></script>
 
