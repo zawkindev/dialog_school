@@ -27,11 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let menuIconOpened = false;
 
   const dictionary = {
+    language: ["English","Русский", "O'zbek"],
     tashent: ["Tashkent", "Ташкент", "Toshkent"],
     home: ["home", "Главный", "Asosiy"],
     services: ["services", "Услуги", "Xizmatlar"],
     about: ["about us", "О нас", "Biz haqimizda"],
-    gallery: ["gallery", "Галерея", "Albom"],
+    gallery: ["gallery", "Галерея", "Galereya"],
     videos: ["videos", "Видео", "video"],
     contact: ["contact us", "Контакт", "Bog'lanish"],
     audiology: ["audiology", "Аудиология", "audiologiya"],
@@ -93,6 +94,17 @@ document.addEventListener("DOMContentLoaded", function () {
     languageDropdown = !languageDropdown;
     languageInActiveButtons.style.display = languageDropdown ? "flex" : "none";
   });
+
+
+ document.getElementById("m-navbar-home").innerHTML = dictionary.home[currentLanguage]
+ document.getElementById("m-navbar-services").innerHTML = dictionary.services[currentLanguage]
+ document.getElementById("m-navbar-about").innerHTML = dictionary.about[currentLanguage]
+ document.getElementById("m-navbar-gallery").innerHTML = dictionary.gallery[currentLanguage]
+ document.getElementById("m-navbar-videos").innerHTML = dictionary.videos[currentLanguage]
+ document.getElementById("m-navbar-contact").innerHTML = dictionary.contact[currentLanguage]
+ languageActiveButton.innerHTML = dictionary.language[currentLanguage]
+
+
 
   // more.addEventListener("mouseover", function () {
   //   moreMenuLoggic = true;
