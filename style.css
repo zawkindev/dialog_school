@@ -227,17 +227,15 @@ header {
   flex-direction: column;
   margin-top: 25px;
   position: absolute;
-  right: 100;
 }
 
 .moreMenuOptions {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  right: -15px;
+  right: -100px;
+  min-width: 8rem;
   top: 9px;
-  height: 60px;
-  width: 180px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 10px;
 }
@@ -247,7 +245,6 @@ header {
   text-decoration: none;
   text-transform: none;
   width: 100%;
-  height: 50%;
   padding: 5px;
 }
 .moreMenuOption:hover {
@@ -585,4 +582,25 @@ header {
 #inputs {
   max-width: 70vw;
   margin-inline: auto;
+}
+footer {
+  background-color: #6000ff;
+  color: #eef1f0;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+footer a span{
+  font-size: 14px;
+}
+
+.glow:hover {
+  text-shadow:
+    0 0 0.5px #fff,
+    0 0 0.51px #ff4da6,
+    0 0 0.51px #ff4da6,
+    0 0 0.51px #ff4da6,
+    0 0 0.51px #ff4da6,
+    0 0 0.51px #ff4da6,
+    0 0 0.51px #ff4da6;
 }

@@ -104,7 +104,13 @@
           class="hover-cyan"><span class="hover-cyan">gallery</span></a>
         <a onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
           class="hover-cyan"><span class="hover-cyan">videos</span></a>
-        <div class="hover-cyan" id="more">
+<a>
+  
+           <span
+              onclick='document.getElementById("contact").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+              class="hover-cyan">Contact Us</span>
+</a>
+ <!--         <div class="hover-cyan" id="more">
           <span>more</span>
           <svg width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -112,22 +118,9 @@
           </svg>
         </div>
         <div id="moreDropdownMenu" class="t-t-none p-absolute">
-          <div class="arrow-top"></div>
           <div class="p-absolute moreMenuOptions">
-            <span
-              onclick='document.getElementById("testimonals").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-              class="prevent-select moreMenuOption" style="
-                  border-top-left-radius: 5px;
-                  border-top-right-radius: 5px;
-                ">Testimonals</span>
-            <span
-              onclick='document.getElementById("contact_us").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-              class="prevent-select moreMenuOption" style="
-                  border-bottom-left-radius: 5px;
-                  border-bottom-right-radius: 5px;
-                ">Contact Us</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -275,131 +268,52 @@
         <input id="email-id" class="input-info" type="email" required placeholder="Email ID" />
       </div>
       <textarea id="message-text" class="input-info" style="height: 11rem; padding-top: 0.5rem; resize: none;" required
-        rows="3" placeholder="Message" seleniumid="sel_srcBox""></textarea>
+        rows="3" placeholder="Message" seleniumid="sel_srcBox"></textarea>
         <button type=" submit" id="submit-button">
           Submit
         </button>
       </div>
     </form>
 
-<ul id="m-navbar">
-      <li
-        class="capitalize m-navbar-option"
-        onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-      >
-        home
-      </li>
-      <li
-        class="capitalize m-navbar-option"
-        onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth"});'
-      >
-        services
-      </li>
-      <li
-        class="m-navbar-option"
-        onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth"});'
-      >
-        About us
-      </li>
-      <li
-        class="capitalize m-navbar-option"
-        onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth"});'
-      >
-        gallery
-      </li>
-      <li
-        class="capitalize m-navbar-option"
-        onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth"});'
-      >
-        videos
-      </li><li
-        class="capitalize m-navbar-option"
-        onclick='document.getElementById("contact").scrollIntoView({ behavior: "smooth"});'
-      >
-      Contact Us
-      </li>
 
-    </ul>
-    <div class="f-r container">
-        <a>noreply@gmail.com</a>
-    </div>
-
-    <div class="menu-icon">
-      <svg
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        class="menu-icon-svg"
-      >
-        <path
-          d="M4 6H20M4 12H14M4 18H9"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </div>
-
-    <div class="prevent-select hidden">
-      <div class="container upperCase">
-        <div class="upperCase">
+<footer>
+   <div class="prevent-select hidden">
+      <div class="container f-r jc-sb">
+        <div class="upperCase" style="display: flex; gap:1rem; flex-wrap: wrap;">
           <a
-            class="hover-cyan"
             onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="hover-cyan">home </span></a
+            ><span class="glow">home </span></a
           >
           <a
-            class="hover-cyan"
             onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="hover-cyan">services</span></a
+            ><span class="glow">services</span></a
           >
           <a
-            class="hover-cyan"
             onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="hover-cyan">about us</span></a
+            ><span class="glow">about us</span></a
           >
           <a
             onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            class="hover-cyan"
-            ><span class="hover-cyan">gallery</span></a
+            ><span class="glow">gallery</span></a
           >
           <a
             onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            class="hover-cyan"
-            ><span class="hover-cyan">videos</span></a
+            ><span class="glow">videos</span></a
           >
-          <div class="hover-cyan" class="more">
-            <span>more</span>
-            <svg
-              width="22px"
-              height="22px"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
-              />
-            </svg>
-          </div>
-          <div id="moreDropdownMenu" class="t-t-none p-absolute">
-            <div class="arrow-top"></div>
-            <div class="p-absolute moreMenuOptions">
-              <span
-                onclick='document.getElementById("contact_us").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-                class="prevent-select moreMenuOption"
-                style="
-                  border-bottom-left-radius: 5px;
-                  border-bottom-right-radius: 5px;
-                "
-                >Contact Us</span
-              >
-            </div>
-          </div>
-        </div>
+          <a
+            onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
+            ><span class="glow">Contact Us</span></a
+          >
       </div>
+
+      <a>noreply@gmail.com</a>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <div style="text-align: right; margin-top: 15px;">
+      
+    <span>© Copyrights 2023 - 2024. Dialog School. All Rights Reserved.</span>
+    </div>
+</footer>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./script.js"></script>
 
   </body>
