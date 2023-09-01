@@ -10,26 +10,26 @@
 
 <body>
   <ul id="m-navbar">
-    <li id="m-navbar-home" class="capitalize m-navbar-option"
+    <li id="" class="capitalize m-navbar-option home-text"
       onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'>
       home
     </li>
-    <li id="m-navbar-services" class="capitalize m-navbar-option"
+    <li id="" class="capitalize m-navbar-option services-text"
       onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth"});'>
       services
     </li>
-    <li id="m-navbar-about" class="m-navbar-option" onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth"});'>
+    <li id="" class="m-navbar-option about-text" onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth"});'>
       About us
     </li>
-    <li id="m-navbar-gallery" class="capitalize m-navbar-option"
+    <li id="" class="capitalize m-navbar-option gallery-text"
       onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth"});'>
       gallery
     </li>
-    <li id="m-navbar-videos" class="capitalize m-navbar-option"
+    <li class="capitalize m-navbar-option videos-text"
       onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth"});'>
       videos
     </li>
-    <li id="m-navbar-contact" class="capitalize m-navbar-option"
+    <li class="capitalize m-navbar-option contact-text"
       onclick='document.getElementById("contact").scrollIntoView({ behavior: "smooth"});'>
       Contact Us
     </li>
@@ -129,7 +129,7 @@
   <!-- </a> -->
 
   <div id="services" class="container center m-t-60 hidden">
-    <span class="main-color w-100"
+    <span class="main-color w-100 services-text"
       style="font-size: 30px; font-weight: 900; text-align: center;margin-inline: auto;">Services</span>
     <div id="cards" class="w-100 m-t-30">
       <div class="card">
@@ -137,8 +137,8 @@
           <img src="public/images/audioligy.jpeg" class="service-img" />
         </div>
         <div class="card-text">
-          <h3 class="m-b-15" style="font-weight: 500">Audiology</h3>
-          <p class="">
+          <h3 class="m-b-15 capitalize" id="audiology-text" style="font-weight: 500">Audiology</h3>
+          <p id="audiology-info">
             Our audiology services offer comprehensive diagnostic testing and
             personalized treatment options to help individuals regain their
             quality of life and improve their communication abilities.
@@ -150,8 +150,8 @@
           <img src="public/images/group_therapy.jpeg" class="service-img" />
         </div>
         <div class="card-text">
-          <h3 class="m-b-15" style="font-weight: 500">Group therapy</h3>
-          <p class="">
+          <h3 class="m-b-15 group_therapy capitalize" style="font-weight: 500">Group therapy</h3>
+          <p class="group_therapy_info">
             Our expert therapists create a safe and inclusive space for
             individuals to grow, heal, and navigate their personal journeys
             towards lasting positive change.
@@ -163,8 +163,8 @@
           <img src="public/images/individual_therapy.svg" class="service-img" />
         </div>
         <div class="card-text">
-          <h3 class="m-b-15" style="font-weight: 500">Individual Classes</h3>
-          <p class="">
+          <h3 class="m-b-15 individual_classes capitalize" style="font-weight: 500">Individual Classes</h3>
+          <p class="individual_classes_info">
             Through a collaborative therapeutic relationship, clients can gain
             self-awareness, develop healthy coping mechanisms, and
             experience long-lasting positive change.
@@ -176,10 +176,10 @@
           <img src="public/images/diagnostic_evaluations.webp" class="service-img" />
         </div>
         <div class="card-text">
-          <h3 class="m-b-15" style="font-weight: 500">
+          <h3 class="m-b-15 diagnostic_evaluations capitalize" style="font-weight: 500">
             Diagnostic evaluations
           </h3>
-          <p class="">
+          <p class="diagnostic_evaluations_info">
             Our team of experienced clinicians utilizes a combination of
             standardized tests, interviews, and clinical observations to
             gather information and provide accurate diagnoses.
@@ -189,11 +189,11 @@
     </div>
   </div>
   <div id="about" class="container center m-t-60 m-b-30 hidden">
-    <span class="main-color" style="font-size: 30px; font-weight: 900">About Us</span>
+    <span class="main-color about-text capitalize" style="font-size: 30px; font-weight: 900">About Us</span>
     <div>
       <img src="public/images/about_us.png" class="about_us-img" />
     </div>
-    <p class="p-5">
+    <p id="about_info" class="p-5">
       We pride ourselves in providing exceptional services for all
       rehabilitation needs. By merging innovative service models and
       technology, we, Medi Physiocare, situated at Kohalli, Aigali, Karnataka,
@@ -204,7 +204,7 @@
     </p>
   </div>
   <div id="gallery" class="container center m-t-10r m-b-60 hidden">
-    <span class="main-color m-b-30" style="
+    <span class="main-color m-b-30 gallery-text capitalize" style="
           font-size: 30px;
           padding-bottom: 60px;
           font-weight: 900;
@@ -220,7 +220,7 @@
     </div>
   </div>
   <div id="videos" class="container center m-t-10r m-b-60 hidden">
-    <span class="main-color m-b-30" style="
+    <span class="main-color m-b-30 videos-text capitalize" style="
           font-size: 30px;
           padding-bottom: 60px;
           font-weight: 700;
@@ -258,20 +258,23 @@
     </div>
   </div>
   <form id="contact" class="center m-t-15 m-b-30 hidden prevent-select">
-    <span class="main-color" style="font-size: 30px; font-weight: 900">Contact Us</span>
+    <span class="main-color contact-text capitalize" style="font-size: 30px; font-weight: 900">Contact Us</span>
     <div id="inputs" class="w-100 m-t-30 center f-r f-w">
       <div class="f-c center">
-        <input id="full-name" class="input-info" type="text" placeholder="Full Name" />
-        <input id="mobile-number" class="input-info" type="tel"
+        <input id="full_name" class="input-info" type="text" placeholder="Full Name" />
+        <input id="mobile_number" class="input-info" type="tel"
           pattern="^[+]?998([0-9][012345789]|[0-9][125679]|7[01234569])[0-9]{7}$" required
           placeholder="Mobile Number" />
-        <input id="email-id" class="input-info" type="email" required placeholder="Email ID" />
+        <input id="email_id" class="input-info" type="email" required placeholder="Email ID" />
       </div>
-      <textarea id="message-text" class="input-info" style="height: 11rem; padding-top: 0.5rem; resize: none;" required
+      <textarea id="message_text" class="input-info" style="height: 11rem; padding-top: 0.5rem; resize: none;" required
         rows="3" placeholder="Message" seleniumid="sel_srcBox"></textarea>
-        <button type=" submit" id="submit-button">
+      <div class="w-100">
+<button type="submit" id="submit-button">
           Submit
         </button>
+      </div>
+        
       </div>
     </form>
 
@@ -279,30 +282,30 @@
 <footer>
    <div class="prevent-select hidden">
       <div class="container f-r jc-sb">
-        <div class="upperCase" style="display: flex; gap:1rem; flex-wrap: wrap;">
+        <div class="upperCase" style="display: flex; gap:1rem; flex-wrap: wrap; max-width: 55vw;">
           <a
             onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="glow">home </span></a
+            ><span class="glow home-text">home </span></a
           >
           <a
             onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="glow">services</span></a
+            ><span class="glow services-text">services</span></a
           >
           <a
             onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="glow">about us</span></a
+            ><span class="glow about-text">about us</span></a
           >
           <a
             onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="glow">gallery</span></a
+            ><span class="glow gallery-text">gallery</span></a
           >
           <a
             onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="glow">videos</span></a
+            ><span class="glow videos-text">videos</span></a
           >
           <a
             onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-            ><span class="glow">Contact Us</span></a
+            ><span class="glow contact-text">Contact Us</span></a
           >
       </div>
 

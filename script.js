@@ -32,7 +32,7 @@ const dictionary = {
   services: ["services", "Услуги", "Xizmatlar"],
   about: ["about us", "О нас", "Biz haqimizda"],
   gallery: ["gallery", "Галерея", "Galereya"],
-  videos: ["videos", "Видео", "video"],
+  videos: ["videos", "Видео", "videolar"],
   contact: ["contact us", "Контакт", "Bog'lanish"],
   audiology: ["audiology", "Аудиология", "audiologiya"],
   group_therapy: ["group therapy", "Групповая терапия", "Jamoaviy terapiya"],
@@ -67,11 +67,15 @@ const dictionary = {
     "Наша команда опытных врачей использует комбинацию стандартизированных тестов, интервью и клинических наблюдений для сбора информации и постановки точного диагноза.",
     "Bizning tajribali klinisyenlar jamoasi ma'lumot to'plash va aniq tashxis qo'yish uchun standartlashtirilgan testlar, intervyular va klinik kuzatuvlar kombinatsiyasidan foydalanadi.",
   ],
-  about_text: [
+  about_info: [
     "We pride ourselves in providing exceptional services for all rehabilitation needs. By merging innovative service models and technology, we, Medi Physiocare, situated at Kohalli, Aigali, Karnataka, provide special speech tools and expert services for total child development, academic performance, professional speaking and mental health services. Connect with us to see how we can serve you and your loved ones.",
     "Мы гордимся тем, что предоставляем исключительные услуги для всех потребностей в реабилитации. Объединяя инновационные модели обслуживания и технологии, мы, Medi Physiocare, расположенная в Кохалли, Айгали, Карнатака, предоставляем специальные речевые инструменты и экспертные услуги для общего развития ребенка, успеваемости, профессиональной речи и услуг в области психического здоровья. Свяжитесь с нами, чтобы узнать, как мы можем служить вам и вашим близким.",
     "Biz barcha reabilitatsiya ehtiyojlari uchun ajoyib xizmatlarni taqdim etishdan faxrlanamiz. Innovatsion xizmat modellari va texnologiyalarini birlashtirib, biz, Kohalli, Aigali, Karnatakada joylashgan Medi Physiocare, bolaning umumiy rivojlanishi, akademik ko'rsatkichlari, professional nutqi va ruhiy salomatlik xizmatlari uchun maxsus nutq vositalari va ekspert xizmatlarini taqdim etamiz. Sizga va yaqinlaringizga qanday xizmat qilishimizni bilish uchun biz bilan bog'laning.",
   ],
+  full_name: ["Full Name", "Имя Отчество", "Ism Familiya"],
+  mobile_number: ["Mobile Number", "Номер мобильного телефона", "Telefon Raqam"],
+  email_id: ["Email", "Электронная почта", "Email"],
+  message_text: ["Message","Текст", "Matn"],
   submit: ["submit", "Отправить", "Yuborish"],
 };
 
@@ -98,7 +102,7 @@ for (let index = 0; index < languageButtons.length; index++) {
     setCurrentLanguage(clickedLanguage);
     let activeLanguage = languages[currentLanguage];
     languageActiveButton.innerHTML = activeLanguage;
-    translateTexts()
+    translateTexts();
     languageDropdown = false;
     languageInActiveButtons.style.display = "none";
   });
@@ -108,23 +112,92 @@ languageActiveButton.addEventListener("click", function () {
   languageInActiveButtons.style.display = languageDropdown ? "flex" : "none";
 });
 
+function forTranslate(elements, value) {
+  for (let index = 0; index < elements.length; index++) {
+    elements[index].innerHTML = value;
+  }
+}
+
 function translateTexts() {
-  document.getElementById("m-navbar-home").innerHTML =
-    dictionary.home[currentLanguage];
-  document.getElementById("m-navbar-services").innerHTML =
-    dictionary.services[currentLanguage];
-  document.getElementById("m-navbar-about").innerHTML =
-    dictionary.about[currentLanguage];
-  document.getElementById("m-navbar-gallery").innerHTML =
-    dictionary.gallery[currentLanguage];
-  document.getElementById("m-navbar-videos").innerHTML =
-    dictionary.videos[currentLanguage];
-  document.getElementById("m-navbar-contact").innerHTML =
-    dictionary.contact[currentLanguage];
-  document.getElementById("tashkent-text").innerHTML = dictionary.tashent[currentLanguage]
-  document.getElementsByClassName("home-text").forEach((element)=>{
-    element.innerHTML = dictionary.home[currentLanguage]
-  })
+  // document.getElementById("m-navbar-home").innerHTML =
+  //   dictionary.home[currentLanguage];
+  // document.getElementById("m-navbar-services").innerHTML =
+  //   dictionary.services[currentLanguage];
+  // document.getElementById("m-navbar-about").innerHTML =
+  //   dictionary.about[currentLanguage];
+  // document.getElementById("m-navbar-gallery").innerHTML =
+  //   dictionary.gallery[currentLanguage];
+  // document.getElementById("m-navbar-videos").innerHTML =
+  //   dictionary.videos[currentLanguage];
+  // document.getElementById("m-navbar-contact").innerHTML =
+  //   dictionary.contact[currentLanguage];
+  document.getElementById("tashkent-text").innerHTML =
+    dictionary.tashent[currentLanguage];
+
+  forTranslate(
+    document.getElementsByClassName("home-text"),
+    dictionary.home[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("services-text"),
+    dictionary.services[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("about-text"),
+    dictionary.about[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("gallery-text"),
+    dictionary.gallery[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("videos-text"),
+    dictionary.videos[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("contact-text"),
+    dictionary.contact[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("group_therapy"),
+    dictionary.group_therapy[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("group_therapy_info"),
+    dictionary.group_therapy_info[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("individual_classes"),
+    dictionary.individual_classes[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("individual_classes_info"),
+    dictionary.individual_classes_info[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("diagnostic_evaluations"),
+    dictionary.diagnostic_evaluations[currentLanguage],
+  );
+  forTranslate(
+    document.getElementsByClassName("diagnostic_evaluations_info"),
+    dictionary.diagnostic_evaluations_info[currentLanguage],
+  );
+
+  document.getElementById("audiology-text").innerHTML =
+    dictionary.audiology[currentLanguage];
+
+  document.getElementById("audiology-info").innerHTML =
+    dictionary.audiology_info[currentLanguage];
+
+  document.getElementById("about_info").innerHTML =
+    dictionary.about_info[currentLanguage];
+  document.getElementById("full_name").placeholder = dictionary.full_name[currentLanguage]
+  document.getElementById("mobile_number").placeholder = dictionary.mobile_number[currentLanguage]
+  document.getElementById("email_id").placeholder = dictionary.email_id[currentLanguage]
+  document.getElementById("message_text").placeholder = dictionary.message_text[currentLanguage]
+
+  document.getElementById("submit-button").innerHTML = dictionary.submit[currentLanguage]
+
 }
 
 // more.addEventListener("mouseover", function () {
