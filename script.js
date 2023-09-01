@@ -217,11 +217,11 @@ function translateTexts() {
 //   moreDropdownMenu.style.display = "flex";
 // });
 
-allDivs.forEach((els) => {
-  if (!els.classList.contains("notHidden")) {
-    els.classList.add("hidden");
-  }
-});
+// allDivs.forEach((els) => {
+//   if (!els.classList.contains("notHidden")) {
+//     els.classList.add("hidden");
+//   }
+// });
 
 const hiddenElements = document.querySelectorAll(".hidden");
 const observer = new IntersectionObserver((entries) => {
