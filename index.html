@@ -51,7 +51,7 @@
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
-            </svg><span>Tashkent</span>
+            </svg><span id="tashkent-text">Tashkent</span>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
   <div id="home" class="prevent-select hidden">
     <div id="languageDropdownMenu" class="prevent-select">
       <div id="languageActiveButton" class="f-r languageButton center">
-        <span>English</span>
+        English
       </div>
       <div id="languageInactiveButtons">
         <div class="languageButton inActiveLanguageButton f-r center">
@@ -85,13 +85,13 @@
       <div class="upperCase" id="navbar-left">
         <a class="hover-cyan"
           onclick='document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'><span
-            class="hover-cyan">home </span></a>
+            class="hover-cyan home-text">home </span></a>
         <a class="hover-cyan"
           onclick='document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'><span
-            class="hover-cyan">services</span></a>
+            class="hover-cyan services-text">services</span></a>
         <a class="hover-cyan"
           onclick='document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'><span
-            class="hover-cyan">about us</span></a>
+            class="hover-cyan about-text">about us</span></a>
       </div>
       <span style="
             font-size: 5em;
@@ -101,14 +101,14 @@
           " class="main-color">Dialog School</span>
       <div class="upperCase" id="navbar-right">
         <a onclick='document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-          class="hover-cyan"><span class="hover-cyan">gallery</span></a>
+          class="hover-cyan"><span class="hover-cyan gallery-text">gallery</span></a>
         <a onclick='document.getElementById("videos").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-          class="hover-cyan"><span class="hover-cyan">videos</span></a>
+          class="hover-cyan"><span class="hover-cyan videos-text">videos</span></a>
 <a>
   
            <span
               onclick='document.getElementById("contact").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });'
-              class="hover-cyan">Contact Us</span>
+              class="hover-cyan contact-text">Contact Us</span>
 </a>
  <!--         <div class="hover-cyan" id="more">
           <span>more</span>
